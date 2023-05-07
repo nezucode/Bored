@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1052207710876-i0boe1fnmemdfffdlia0qd6l4ld7c99o.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1052207710876-i0boe1fnmemdfffdlia0qd6l4ld7c99o</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB_gxO7E_hnVfcOCwvVUsZNxei7MXlZkWY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1052207710876</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.nezukowashere.Bored</string>
+	<key>PROJECT_ID</key>
+	<string>bored-app-2406b</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bored-app-2406b.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1052207710876:ios:179791bb7d052e9e81e359</string>
+</dict>
+</plist>
