@@ -106,15 +106,15 @@ class RegisterController: UIViewController {
     }
     
     //MARK: - Selectors
-    @objc func signInTap(){
+    @objc func createAccount(){
+        
+    }
+    
+    @objc private func didTapSignIn(){
         let lc = LoginController()
         let navVC = UINavigationController(rootViewController: lc)
         navVC.modalPresentationStyle = .fullScreen
         present(navVC, animated: true)
-    }
-    
-    @objc private func didTapSignIn(){
-
     }
 
 }
