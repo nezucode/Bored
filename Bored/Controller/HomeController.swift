@@ -208,7 +208,9 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     @objc func infoTapped() {
-        
+        let showInfo = UIAlertController(title: "FYI", message: "This all data are comes from The Bored API.", preferredStyle: .alert)
+        showInfo.addAction(UIAlertAction(title: "Okay!", style: .default))
+        present(showInfo, animated: true)
     }
 }
 
