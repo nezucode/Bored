@@ -26,6 +26,11 @@ class ForgotPassController: UIViewController {
         self.setupUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
     //MARK: - UI Setup
     private func setupUI(){
         self.view.backgroundColor = .systemBackground
