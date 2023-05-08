@@ -14,7 +14,7 @@ class LoginController: UIViewController {
     
     //MARK: - UI Components
     private let headerView = AuthHeaderView(title: "Let's get something!", subTitle: "Good to see you back.")
-    private let usernameField = CustomTextField(fieldType: .email)
+    private let emailField = CustomTextField(fieldType: .email)
     private let passwordField = CustomTextField(fieldType: .password)
     
     private let signInButton = CustomButton(title: "Sign In", hasBackground: true, fontSize: .big)
@@ -42,14 +42,14 @@ class LoginController: UIViewController {
     private func setupUI(){
         self.view.backgroundColor = .systemBackground
         self.view.addSubview(headerView)
-        self.view.addSubview(usernameField)
+        self.view.addSubview(emailField)
         self.view.addSubview(passwordField)
         self.view.addSubview(signInButton)
         self.view.addSubview(newUserButton)
         self.view.addSubview(forgotPasswordButton)
         
         headerView.translatesAutoresizingMaskIntoConstraints = false
-        usernameField.translatesAutoresizingMaskIntoConstraints = false
+        emailField.translatesAutoresizingMaskIntoConstraints = false
         passwordField.translatesAutoresizingMaskIntoConstraints = false
         signInButton.translatesAutoresizingMaskIntoConstraints = false
         newUserButton.translatesAutoresizingMaskIntoConstraints = false
@@ -61,13 +61,13 @@ class LoginController: UIViewController {
             self.headerView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
             self.headerView.heightAnchor.constraint(equalToConstant: 222),
             
-            self.usernameField.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 40),
-            self.usernameField.centerXAnchor.constraint(equalTo: headerView.centerXAnchor),
-            self.usernameField.heightAnchor.constraint(equalToConstant: 48),
-            self.usernameField.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
+            self.emailField.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 40),
+            self.emailField.centerXAnchor.constraint(equalTo: headerView.centerXAnchor),
+            self.emailField.heightAnchor.constraint(equalToConstant: 48),
+            self.emailField.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
             
-            self.passwordField.topAnchor.constraint(equalTo: usernameField.bottomAnchor, constant: 16),
-            self.passwordField.centerXAnchor.constraint(equalTo: usernameField.centerXAnchor),
+            self.passwordField.topAnchor.constraint(equalTo: emailField.bottomAnchor, constant: 16),
+            self.passwordField.centerXAnchor.constraint(equalTo: emailField.centerXAnchor),
             self.passwordField.heightAnchor.constraint(equalToConstant: 48),
             self.passwordField.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
             
