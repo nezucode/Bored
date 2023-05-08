@@ -14,7 +14,7 @@ class LoginController: UIViewController {
     
     //MARK: - UI Components
     private let headerView = AuthHeaderView(title: "Let's get something!", subTitle: "Good to see you back.")
-    private let usernameField = CustomTextField(fieldType: .username)
+    private let usernameField = CustomTextField(fieldType: .email)
     private let passwordField = CustomTextField(fieldType: .password)
     
     private let signInButton = CustomButton(title: "Sign In", hasBackground: true, fontSize: .big)
