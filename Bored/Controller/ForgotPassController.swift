@@ -16,14 +16,11 @@ class ForgotPassController: UIViewController {
     private let emailField = CustomTextField(fieldType: .email)
     private let resetPasswordButton = CustomButton(title: "Reset Password", hasBackground: true, fontSize: .big)
     
-    
-    
-    
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.setupUI()
+        self.resetPasswordButton.addTarget(self, action: #selector(didTapForgotPassword), for: .touchUpInside)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,6 +30,9 @@ class ForgotPassController: UIViewController {
     
     //MARK: - UI Setup
     private func setupUI(){
+        let back = UIImage(systemName: "chevron.backward")?.withTintColor(.black, renderingMode: .alwaysOriginal)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", image: back, target: self, action: #selector(didBackTap))
+        
         self.view.backgroundColor = .systemBackground
         self.view.addSubview(headerView)
         self.view.addSubview(emailField)
@@ -76,16 +76,16 @@ class ForgotPassController: UIViewController {
     }
     
     //MARK: - Selectors
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc private func didTapForgotPassword(){
+        guard let email = self.emailField.text, !email.isEmpty else { return }
+        
+        //TODO: - Email Validation
+        
+        
     }
-    */
+    
+    @objc private func didBackTap(){
+        let _ = self.dismiss(animated: true, completion: nil)
+    }
 
 }
