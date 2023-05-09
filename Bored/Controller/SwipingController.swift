@@ -87,7 +87,7 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
         view.addSubview(bottomControlStackView)
         
         NSLayoutConstraint.activate([
-            bottomControlStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
+            bottomControlStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -48),
             bottomControlStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             bottomControlStackView.heightAnchor.constraint(equalToConstant: 90)
         ])
