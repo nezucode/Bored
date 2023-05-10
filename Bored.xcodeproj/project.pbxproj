@@ -18,6 +18,8 @@
 		CE51A2D62A011881005666D9 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE51A2D52A011881005666D9 /* RegisterController.swift */; };
 		CE51A2D82A011AD0005666D9 /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE51A2D72A011AD0005666D9 /* AuthHeaderView.swift */; };
 		CE51A2DA2A0145DE005666D9 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE51A2D92A0145DE005666D9 /* CustomTextField.swift */; };
+		CE6EB1112A0A285F00EA7B21 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6EB1102A0A285F00EA7B21 /* AuthService.swift */; };
+		CE6EB1132A0A2D4600EA7B21 /* RegisterUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6EB1122A0A2D4600EA7B21 /* RegisterUserRequest.swift */; };
 		CE81274029D5304900EDFEB6 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE81273F29D5304900EDFEB6 /* HomeController.swift */; };
 		CE9FCAA829DFFAD900E61521 /* RandomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FCAA729DFFAD900E61521 /* RandomController.swift */; };
 		CE9FCAAA29E0602300E61521 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FCAA929E0602300E61521 /* Activity.swift */; };
@@ -45,6 +47,8 @@
 		CE51A2D52A011881005666D9 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		CE51A2D72A011AD0005666D9 /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = "<group>"; };
 		CE51A2D92A0145DE005666D9 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		CE6EB1102A0A285F00EA7B21 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		CE6EB1122A0A2D4600EA7B21 /* RegisterUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserRequest.swift; sourceTree = "<group>"; };
 		CE81273F29D5304900EDFEB6 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		CE9FCAA729DFFAD900E61521 /* RandomController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomController.swift; sourceTree = "<group>"; };
 		CE9FCAA929E0602300E61521 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 		CED9642629D27810005E93E1 /* Bored */ = {
 			isa = PBXGroup;
 			children = (
+				CE6EB1102A0A285F00EA7B21 /* AuthService.swift */,
+				CE112C1C2A08EF2200260DB0 /* AlertManager.swift */,
 				CED9643529D27816005E93E1 /* Info.plist */,
 				CED9643C29D27A3C005E93E1 /* Model */,
 				CED9643D29D27A43005E93E1 /* View */,
@@ -146,7 +152,6 @@
 				CE51A2D32A01186D005666D9 /* LoginController.swift */,
 				CE51A2D52A011881005666D9 /* RegisterController.swift */,
 				CE34357E2A0749E600BCF273 /* WebViewController.swift */,
-				CE112C1C2A08EF2200260DB0 /* AlertManager.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 				CEED00E329DABF7200E2F152 /* Category.swift */,
 				CE9FCAA929E0602300E61521 /* Activity.swift */,
 				CE43E26E29E7A228006AFB69 /* ImageActivity.swift */,
+				CE6EB1122A0A2D4600EA7B21 /* RegisterUserRequest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -295,6 +301,8 @@
 				CEA15FA729D3C8B700CF2F83 /* SlideCell.swift in Sources */,
 				CE51A2D22A011858005666D9 /* ForgotPassController.swift in Sources */,
 				CE51A2D42A01186D005666D9 /* LoginController.swift in Sources */,
+				CE6EB1112A0A285F00EA7B21 /* AuthService.swift in Sources */,
+				CE6EB1132A0A2D4600EA7B21 /* RegisterUserRequest.swift in Sources */,
 				CEED00E229DA892200E2F152 /* TableCell.swift in Sources */,
 				CE81274029D5304900EDFEB6 /* HomeController.swift in Sources */,
 				CE43E26F29E7A228006AFB69 /* ImageActivity.swift in Sources */,
