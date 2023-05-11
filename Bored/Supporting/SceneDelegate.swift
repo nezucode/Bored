@@ -23,6 +23,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window?.rootViewController = swipingController
         self.window?.makeKeyAndVisible()
         
+        let userRequest = RegisterUserRequest(
+            username: "nezuko",
+            email: "nezuko@gmail.com",
+            password:"nezuko123"
+        )
+        
+        AuthService.shared.registerUser(with: userRequest) { wasRegistered, error in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            
+            print("wasRegistered", wasRegistered)
+        }
+        
 //        guard let winScene = (scene as? UIWindowScene) else { return }
 //        let window = UIWindow(windowScene: winScene)
 //
