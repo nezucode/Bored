@@ -26,6 +26,7 @@
 		CEA15FA329D3C50000CF2F83 /* SwipingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA15FA229D3C4FF00CF2F83 /* SwipingController.swift */; };
 		CEA15FA529D3C5BE00CF2F83 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA15FA429D3C5BE00CF2F83 /* Slide.swift */; };
 		CEA15FA729D3C8B700CF2F83 /* SlideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA15FA629D3C8B700CF2F83 /* SlideCell.swift */; };
+		CEB0620D2A0CCDD600B81D3D /* LoginUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0620C2A0CCDD600B81D3D /* LoginUserRequest.swift */; };
 		CEC02C7D2A00945000EE332A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEC02C7C2A00945000EE332A /* GoogleService-Info.plist */; };
 		CED9642829D27811005E93E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9642729D27811005E93E1 /* AppDelegate.swift */; };
 		CED9642A29D27811005E93E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9642929D27811005E93E1 /* SceneDelegate.swift */; };
@@ -55,6 +56,7 @@
 		CEA15FA229D3C4FF00CF2F83 /* SwipingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingController.swift; sourceTree = "<group>"; };
 		CEA15FA429D3C5BE00CF2F83 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		CEA15FA629D3C8B700CF2F83 /* SlideCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideCell.swift; sourceTree = "<group>"; };
+		CEB0620C2A0CCDD600B81D3D /* LoginUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserRequest.swift; sourceTree = "<group>"; };
 		CEC02C7C2A00945000EE332A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CED9642429D27810005E93E1 /* Bored.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bored.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED9642729D27811005E93E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				CE9FCAA929E0602300E61521 /* Activity.swift */,
 				CE43E26E29E7A228006AFB69 /* ImageActivity.swift */,
 				CE6EB1122A0A2D4600EA7B21 /* RegisterUserRequest.swift */,
+				CEB0620C2A0CCDD600B81D3D /* LoginUserRequest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				CE6EB1132A0A2D4600EA7B21 /* RegisterUserRequest.swift in Sources */,
 				CEED00E229DA892200E2F152 /* TableCell.swift in Sources */,
 				CE81274029D5304900EDFEB6 /* HomeController.swift in Sources */,
+				CEB0620D2A0CCDD600B81D3D /* LoginUserRequest.swift in Sources */,
 				CE43E26F29E7A228006AFB69 /* ImageActivity.swift in Sources */,
 				CE51A2DA2A0145DE005666D9 /* CustomTextField.swift in Sources */,
 				CE9FCAA829DFFAD900E61521 /* RandomController.swift in Sources */,
