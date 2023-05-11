@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SwipingController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
@@ -54,7 +55,7 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
         collectionView.collectionViewLayout.invalidateLayout()
         collectionView.contentInsetAdjustmentBehavior = .never
         startTimer()
-        startButton.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
+        startButton.addTarget(self, action: #selector(checkAuthentication(_:)), for: .touchUpInside)
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -75,6 +76,22 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
     
     private func startTimer() {
         timer =  Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(moveToNextIndex), userInfo: nil, repeats: true)
+    }
+    
+    @objc public func checkAuthentication(_ sender: UIButton) {
+        if Auth.auth().currentUser == nil {
+            //Go to Sign In screen
+            let lc = LoginController()
+            let navVC = UINavigationController(rootViewController: lc)
+            navVC.modalPresentationStyle = .fullScreen
+            present(navVC, animated: true)
+        } else {
+            //Go to Home screen
+            let hc = HomeController()
+            let navVC = UINavigationController(rootViewController: hc)
+            navVC.modalPresentationStyle = .fullScreen
+            present(navVC, animated: true)
+        }
     }
     
     //MARK: - UI Setup
@@ -103,13 +120,6 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
         }
         collectionView.scrollToItem(at: IndexPath(item: currentIndexCell, section: 0), at: .centeredHorizontally, animated: true)
         pageControl.currentPage = currentIndexCell
-    }
-    
-    @objc func didTapButton(_ sender: UIButton) {
-        let vc = LoginController()
-        let navVC = UINavigationController(rootViewController: vc)
-        navVC.modalPresentationStyle = .fullScreen
-        present(navVC, animated: true)
     }
 
 }

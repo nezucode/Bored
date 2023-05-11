@@ -139,7 +139,11 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
     private func setupUI() {
         let credits = UIImage(systemName: "info.circle.fill")?.withTintColor(.black, renderingMode: .alwaysOriginal)
         let creditsInfo = UIBarButtonItem(image: credits, style: .plain, target: self, action: #selector(infoTapped))
-        self.navigationItem.rightBarButtonItem = creditsInfo
+        self.navigationItem.leftBarButtonItem = creditsInfo
+        
+        let logout = UIImage(systemName: "rectangle.portrait.and.arrow.right")?.withTintColor(.black, renderingMode: .alwaysOriginal)
+        let logoutBtn = UIBarButtonItem(image: logout, style: .plain, target: self, action: #selector(didLogout))
+        self.navigationItem.rightBarButtonItem = logoutBtn
         
         let scrollContentGuide = scrollView.contentLayoutGuide
         let scrollFrameGuide = scrollView.frameLayoutGuide
@@ -211,6 +215,10 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let showInfo = UIAlertController(title: "FYI", message: "This all data are comes from The Bored API.", preferredStyle: .alert)
         showInfo.addAction(UIAlertAction(title: "Okay!", style: .default))
         present(showInfo, animated: true)
+    }
+    
+    @objc func didLogout() {
+        
     }
 }
 
