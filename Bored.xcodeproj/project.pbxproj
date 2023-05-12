@@ -18,6 +18,7 @@
 		CE51A2D62A011881005666D9 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE51A2D52A011881005666D9 /* RegisterController.swift */; };
 		CE51A2D82A011AD0005666D9 /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE51A2D72A011AD0005666D9 /* AuthHeaderView.swift */; };
 		CE51A2DA2A0145DE005666D9 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE51A2D92A0145DE005666D9 /* CustomTextField.swift */; };
+		CE548A8D2A0E269A00E82250 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE548A8C2A0E269A00E82250 /* Validator.swift */; };
 		CE6EB1112A0A285F00EA7B21 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6EB1102A0A285F00EA7B21 /* AuthService.swift */; };
 		CE6EB1132A0A2D4600EA7B21 /* RegisterUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6EB1122A0A2D4600EA7B21 /* RegisterUserRequest.swift */; };
 		CE81274029D5304900EDFEB6 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE81273F29D5304900EDFEB6 /* HomeController.swift */; };
@@ -48,6 +49,7 @@
 		CE51A2D52A011881005666D9 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		CE51A2D72A011AD0005666D9 /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = "<group>"; };
 		CE51A2D92A0145DE005666D9 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		CE548A8C2A0E269A00E82250 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		CE6EB1102A0A285F00EA7B21 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		CE6EB1122A0A2D4600EA7B21 /* RegisterUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserRequest.swift; sourceTree = "<group>"; };
 		CE81273F29D5304900EDFEB6 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			children = (
 				CE6EB1102A0A285F00EA7B21 /* AuthService.swift */,
 				CE112C1C2A08EF2200260DB0 /* AlertManager.swift */,
+				CE548A8C2A0E269A00E82250 /* Validator.swift */,
 				CED9643529D27816005E93E1 /* Info.plist */,
 				CED9643C29D27A3C005E93E1 /* Model */,
 				CED9643D29D27A43005E93E1 /* View */,
@@ -314,6 +317,7 @@
 				CE9FCAA829DFFAD900E61521 /* RandomController.swift in Sources */,
 				CED9642829D27811005E93E1 /* AppDelegate.swift in Sources */,
 				CE112C1D2A08EF2200260DB0 /* AlertManager.swift in Sources */,
+				CE548A8D2A0E269A00E82250 /* Validator.swift in Sources */,
 				CEED00E429DABF7300E2F152 /* Category.swift in Sources */,
 				CED9642A29D27811005E93E1 /* SceneDelegate.swift in Sources */,
 				CE51A2D82A011AD0005666D9 /* AuthHeaderView.swift in Sources */,

@@ -40,6 +40,7 @@ class RegisterController: UIViewController {
         self.setupUI()
         self.termTextView.delegate = self
         self.view.backgroundColor = .systemBackground
+        self.createButton.addTarget(self, action: #selector(createAccount), for: .touchUpInside)
         self.signInButton.addTarget(self, action: #selector(didTapSignIn), for: .touchUpInside)
     }
 
@@ -106,8 +107,33 @@ class RegisterController: UIViewController {
     }
     
     //MARK: - Selectors
-    @objc func createAccount(){
+    @objc private func createAccount(){
+        let registerUserRequest = RegisterUserRequest(
+            username: self.usernameField.text ?? "",
+            email: self.emailField.text ?? "",
+            password: self.passwordField.text ?? ""
+        )
         
+        // Username Check
+        if !Validator.isValidUsername(for: registerUserRequest.username) {
+            AlertManager.showInvalidUsername(on: self)
+            return
+        }
+        
+        // Email Check
+        if !Validator.isValidEmail(for: registerUserRequest.email) {
+            AlertManager.showInvalidEmail(on: self)
+            return
+        }
+
+        // Password Check
+        if !Validator.isValidPassword(for: registerUserRequest.password) {
+            AlertManager.showInvalidPassword(on: self)
+            return
+        }
+        
+        print(registerUserRequest)
+
     }
     
     @objc private func didTapSignIn(){

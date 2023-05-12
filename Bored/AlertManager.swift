@@ -9,9 +9,8 @@ import UIKit
 
 class AlertManager {
     private static func showBasicAlert(on vc: UIViewController, title: String, message: String?){
-        
         DispatchQueue.main.async {
-            let alert = UIAlertController(title: "title", message: message, preferredStyle: .alert)
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
             vc.present(alert, animated: true)
         }
@@ -20,16 +19,15 @@ class AlertManager {
 
 //MARK: - Show Validation Alert
 extension AlertManager {
+    public static func showInvalidUsername(on vc: UIViewController){
+        self.showBasicAlert(on: vc, title: "Invalid Username", message: "Please enter a valid username.")
+    }
     public static func showInvalidEmail(on vc: UIViewController){
         self.showBasicAlert(on: vc, title: "Invalid Email", message: "Please enter a valid email address.")
     }
     
     public static func showInvalidPassword(on vc: UIViewController){
         self.showBasicAlert(on: vc, title: "Invalid Password", message: "Please enter a valid password.")
-    }
-    
-    public static func showInvalidUsername(on vc: UIViewController){
-        self.showBasicAlert(on: vc, title: "Invalid Username", message: "Please enter a valid username.")
     }
 }
 
