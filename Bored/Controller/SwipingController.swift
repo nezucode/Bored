@@ -78,7 +78,7 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
         timer =  Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(moveToNextIndex), userInfo: nil, repeats: true)
     }
     
-    @objc public func checkAuthentication(_ sender: UIButton) {
+    @objc private func checkAuthentication(_ sender: UIButton) {
         if Auth.auth().currentUser == nil {
             //Go to Sign In screen
             let lc = LoginController()

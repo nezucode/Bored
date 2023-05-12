@@ -141,8 +141,8 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let creditsInfo = UIBarButtonItem(image: credits, style: .plain, target: self, action: #selector(infoTapped))
         self.navigationItem.leftBarButtonItem = creditsInfo
         
-        let logout = UIImage(systemName: "rectangle.portrait.and.arrow.right")?.withTintColor(.black, renderingMode: .alwaysOriginal)
-        let logoutBtn = UIBarButtonItem(image: logout, style: .plain, target: self, action: #selector(didLogout))
+        let logoutBtn = UIBarButtonItem(title:"Logout", style: .plain, target: self, action: #selector(didLogout))
+        logoutBtn.tintColor = .black
         self.navigationItem.rightBarButtonItem = logoutBtn
         
         let scrollContentGuide = scrollView.contentLayoutGuide
@@ -218,7 +218,17 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     @objc func didLogout() {
-        
+        AuthService.shared.signOut { [weak self] error in
+            guard let self = self else { return }
+            if let error = error {
+                AlertManager.showLogoutErrorAlert(on: self, with: error)
+                return
+            }
+            
+            if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate {
+                sceneDelegate.checkAuthentication()
+            }
+        }
     }
 }
 
