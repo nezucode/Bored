@@ -58,6 +58,14 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
         startButton.addTarget(self, action: #selector(checkAuthentication(_:)), for: .touchUpInside)
     }
     
+    override open var shouldAutorotate: Bool {
+        return false
+    }
+    
+    override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+    
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         coordinator.animate(alongsideTransition: { (_) in
             self.collectionViewLayout.invalidateLayout()
