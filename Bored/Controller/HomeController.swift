@@ -109,6 +109,15 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return tv
     }()
     
+    private let textHello : UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Hello, Aiko!"
+        label.font = .systemFont(ofSize: 24, weight: .medium)
+        return label
+    }()
+    
+    
     
 
     //MARK: - Lifecyle
@@ -119,6 +128,18 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.view.addSubview(scrollView)
         scrollView.addSubview(scrollContainer)
         setupUI()
+        
+        AuthService.shared.fetchUser { [weak self] user, error in
+            guard let self = self else { return }
+            if let error = error {
+                AlertManager.showFetchingUserError(on: self, with: error)
+                return
+            }
+            
+            if let user = user {
+                self.textHello.text = "Hello, \(user.username)!"
+            }
+        }
         
         NSLayoutConstraint.activate([
             scrollView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -157,13 +178,17 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
             //for dynamic vertical scrolling
             scrollContainer.leadingAnchor.constraint(equalTo: scrollFrameGuide.leadingAnchor),
             scrollContainer.trailingAnchor.constraint(equalTo: scrollFrameGuide.trailingAnchor),
-            scrollContainer.heightAnchor.constraint(equalToConstant: 1400)
+            scrollContainer.heightAnchor.constraint(equalToConstant: 1475)
         ])
 
+        scrollContainer.addSubview(textHello)
+        textHello.topAnchor.constraint(equalTo: scrollContainer.topAnchor, constant: 18).isActive = true
+        textHello.leadingAnchor.constraint(equalTo: scrollContainer.leadingAnchor, constant: 36).isActive = true
         
         scrollContainer.addSubview(randomView)
         randomView.centerXAnchor.constraint(equalTo: scrollContainer.centerXAnchor).isActive = true
-        randomView.heightAnchor.constraint(equalToConstant: 385).isActive = true
+        randomView.topAnchor.constraint(equalTo: scrollContainer.topAnchor, constant: 72).isActive = true
+        randomView.heightAnchor.constraint(equalToConstant: 364).isActive = true
         randomView.widthAnchor.constraint(equalToConstant: 320).isActive = true
         
         scrollContainer.addSubview(textLabel)
@@ -172,8 +197,8 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         randomView.addSubview(imageView)
         imageView.centerXAnchor.constraint(equalTo: randomView.centerXAnchor).isActive = true
-        imageView.topAnchor.constraint(equalTo: randomView.topAnchor, constant: 32).isActive = true
-        imageView.heightAnchor.constraint(equalTo: randomView.heightAnchor, multiplier: 0.5).isActive = true
+        imageView.topAnchor.constraint(equalTo: randomView.topAnchor, constant: 42).isActive = true
+        imageView.heightAnchor.constraint(equalTo: randomView.heightAnchor, multiplier: 0.4).isActive = true
         
         randomView.addSubview(textLabelRandom)
         textLabelRandom.centerXAnchor.constraint(equalTo: imageView.centerXAnchor).isActive = true

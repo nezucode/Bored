@@ -7,5 +7,9 @@ target 'Bored' do
  pod 'FirebaseAuth'
  pod 'FirebaseFirestore'
  pod 'FirebaseStorage'
+ pod 'FirebaseUI'
+ pod 'FirebaseUI/Auth'
+ pod 'FirebaseUI/Google'
+ pod 'FirebaseUI/OAuth'
 
 end

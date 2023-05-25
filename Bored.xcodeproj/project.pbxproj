@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		02020FE59BF2DA38BD080F1E /* Pods_Bored.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB2A4196B6CD7B2F8880043A /* Pods_Bored.framework */; };
+		CE0B58472A1C99E2005818A9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B58462A1C99E2005818A9 /* User.swift */; };
 		CE112C1D2A08EF2200260DB0 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE112C1C2A08EF2200260DB0 /* AlertManager.swift */; };
 		CE185CCB2A029A34002B0BAF /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE185CCA2A029A33002B0BAF /* CustomButton.swift */; };
 		CE34357F2A0749E600BCF273 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE34357E2A0749E600BCF273 /* WebViewController.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		6A44C28D215C6874E75A7147 /* Pods-Bored.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bored.release.xcconfig"; path = "Target Support Files/Pods-Bored/Pods-Bored.release.xcconfig"; sourceTree = "<group>"; };
+		CE0B58462A1C99E2005818A9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CE112C1C2A08EF2200260DB0 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		CE185CCA2A029A33002B0BAF /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		CE34357E2A0749E600BCF273 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				CE43E26E29E7A228006AFB69 /* ImageActivity.swift */,
 				CE6EB1122A0A2D4600EA7B21 /* RegisterUserRequest.swift */,
 				CEB0620C2A0CCDD600B81D3D /* LoginUserRequest.swift */,
+				CE0B58462A1C99E2005818A9 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				CE34357F2A0749E600BCF273 /* WebViewController.swift in Sources */,
 				CE43E26D29E79DB1006AFB69 /* DetailTableViewController.swift in Sources */,
 				CE185CCB2A029A34002B0BAF /* CustomButton.swift in Sources */,
+				CE0B58472A1C99E2005818A9 /* User.swift in Sources */,
 				CEA15FA729D3C8B700CF2F83 /* SlideCell.swift in Sources */,
 				CE51A2D22A011858005666D9 /* ForgotPassController.swift in Sources */,
 				CE51A2D42A01186D005666D9 /* LoginController.swift in Sources */,
