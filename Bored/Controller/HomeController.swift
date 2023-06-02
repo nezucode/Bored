@@ -112,7 +112,7 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
     private let textHello : UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Hello, Aiko!"
+        label.text = "Welcome!"
         label.font = .systemFont(ofSize: 24, weight: .medium)
         return label
     }()
@@ -136,8 +136,10 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 return
             }
             
-            if let user = user {
-                self.textHello.text = "Hello, \(user.username)!"
+            DispatchQueue.main.async {
+                if let user = user {
+                    self.textHello.text = "Hello, \(user.username)!"
+                }
             }
         }
         

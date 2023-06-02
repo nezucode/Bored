@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class LoginController: UIViewController {
     
@@ -122,6 +123,7 @@ class LoginController: UIViewController {
         }
         
     }
+    
     
     @objc func didTapNewUser() {
         let rc = RegisterController()

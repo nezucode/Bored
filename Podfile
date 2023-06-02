@@ -11,5 +11,7 @@ target 'Bored' do
  pod 'FirebaseUI/Auth'
  pod 'FirebaseUI/Google'
  pod 'FirebaseUI/OAuth'
+ pod 'GoogleSignIn','~> 6.2.4'
+ pod 'GoogleSignInSwiftSupport'
 
 end
