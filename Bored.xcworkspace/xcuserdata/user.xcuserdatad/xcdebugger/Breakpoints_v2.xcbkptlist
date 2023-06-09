@@ -3,4 +3,86 @@
    uuid = "20F32D42-0733-4CA9-979A-2A27829CB146"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B5683CB4-8540-4674-805E-4CAEF15E43B1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/AppAuth/Source/AppAuth/iOS/OIDExternalUserAgentIOS.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
+            landmarkName = "-presentExternalUserAgentRequest:session:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6E8ACA8A-FCA1-45BA-BA87-20D1EA2FCAEF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/AppAuth/Source/AppAuth/iOS/OIDExternalUserAgentIOS.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
+            landmarkName = "-presentExternalUserAgentRequest:session:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6E8ACA8A-FCA1-45BA-BA87-20D1EA2FCAEF - 4a4eee76d93c4dc1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[OIDExternalUserAgentIOS presentExternalUserAgentRequest:session:]"
+                  moduleName = "AppAuth"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Nezuko/Documents/iOS%20Development/Mobile/Bored/Pods/AppAuth/Source/AppAuth/iOS/OIDExternalUserAgentIOS.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "168"
+                  endingLineNumber = "168"
+                  offsetFromSymbolStart = "1303">
+               </Location>
+               <Location
+                  uuid = "6E8ACA8A-FCA1-45BA-BA87-20D1EA2FCAEF - 4a4eee76d93c4dc1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[OIDExternalUserAgentIOS presentExternalUserAgentRequest:session:]"
+                  moduleName = "AppAuth"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Nezuko/Documents/iOS%20Development/Mobile/Bored/Pods/AppAuth/Source/AppAuth/iOS/OIDExternalUserAgentIOS.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "168"
+                  endingLineNumber = "168"
+                  offsetFromSymbolStart = "1290">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CAB88D30-E90D-4540-A7C6-CD9C21F6D637"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/AppAuth/Source/AppAuth/iOS/OIDExternalUserAgentIOS.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "-presentExternalUserAgentRequest:session:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

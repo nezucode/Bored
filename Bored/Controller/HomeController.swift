@@ -129,19 +129,19 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
         scrollView.addSubview(scrollContainer)
         setupUI()
         
-        AuthService.shared.fetchUser { [weak self] user, error in
-            guard let self = self else { return }
-            if let error = error {
-                AlertManager.showFetchingUserError(on: self, with: error)
-                return
-            }
-            
-            DispatchQueue.main.async {
-                if let user = user {
-                    self.textHello.text = "Hello, \(user.username)!"
-                }
-            }
-        }
+//        AuthService.shared.fetchUser { [weak self] user, error in
+//            guard let self = self else { return }
+//            if let error = error {
+//                AlertManager.showFetchingUserError(on: self, with: error)
+//                return
+//            }
+//            
+//            DispatchQueue.main.async {
+//                if let user = user {
+//                    self.textHello.text = "Hello, \(user.email)!"
+//                }
+//            }
+//        }
         
         NSLayoutConstraint.activate([
             scrollView.topAnchor.constraint(equalTo: view.topAnchor),
