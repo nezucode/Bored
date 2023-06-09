@@ -8,6 +8,7 @@
 import Foundation
 
 struct RegisterUserRequest {
+    let name: String
     let username: String
     let email: String
     let password: String

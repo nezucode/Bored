@@ -10,6 +10,7 @@ import UIKit
 class RegisterController: UIViewController {
     //MARK: - UI Components
     private let headerView = AuthHeaderView(title: "Getting Started", subTitle: "Create account to continue.")
+    private let nameField = CustomTextField(fieldType: .name)
     private let usernameField = CustomTextField(fieldType: .username)
     private let emailField = CustomTextField(fieldType: .email)
     private let passwordField = CustomTextField(fieldType: .password)
@@ -54,6 +55,7 @@ class RegisterController: UIViewController {
     private func setupUI(){
         self.view.backgroundColor = .systemBackground
         self.view.addSubview(headerView)
+        self.view.addSubview(nameField)
         self.view.addSubview(usernameField)
         self.view.addSubview(emailField)
         self.view.addSubview(passwordField)
@@ -62,6 +64,7 @@ class RegisterController: UIViewController {
         self.view.addSubview(signInButton)
         
         headerView.translatesAutoresizingMaskIntoConstraints = false
+        nameField.translatesAutoresizingMaskIntoConstraints = false
         usernameField.translatesAutoresizingMaskIntoConstraints = false
         emailField.translatesAutoresizingMaskIntoConstraints = false
         passwordField.translatesAutoresizingMaskIntoConstraints = false
@@ -75,8 +78,13 @@ class RegisterController: UIViewController {
             self.headerView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
             self.headerView.heightAnchor.constraint(equalToConstant: 222),
             
-            self.usernameField.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 40),
-            self.usernameField.centerXAnchor.constraint(equalTo: headerView.centerXAnchor),
+            self.nameField.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 40),
+            self.nameField.centerXAnchor.constraint(equalTo: headerView.centerXAnchor),
+            self.nameField.heightAnchor.constraint(equalToConstant: 48),
+            self.nameField.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
+            
+            self.usernameField.topAnchor.constraint(equalTo: nameField.bottomAnchor, constant: 16),
+            self.usernameField.centerXAnchor.constraint(equalTo: nameField.centerXAnchor),
             self.usernameField.heightAnchor.constraint(equalToConstant: 48),
             self.usernameField.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
             
@@ -109,6 +117,7 @@ class RegisterController: UIViewController {
     //MARK: - Selectors
     @objc private func createAccount(){
         let registerUserRequest = RegisterUserRequest(
+            name: self.nameField.text ?? "",
             username: self.usernameField.text ?? "",
             email: self.emailField.text ?? "",
             password: self.passwordField.text ?? ""
@@ -148,6 +157,8 @@ class RegisterController: UIViewController {
             } else {
                 AlertManager.showRegistrationErrorAlert(on: self)
             }
+            
+            print("DEBUG: Successfully created user and uploaded user info")
         }
 
     }

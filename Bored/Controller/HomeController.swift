@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
@@ -129,19 +130,19 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
         scrollView.addSubview(scrollContainer)
         setupUI()
         
-//        AuthService.shared.fetchUser { [weak self] user, error in
-//            guard let self = self else { return }
-//            if let error = error {
-//                AlertManager.showFetchingUserError(on: self, with: error)
-//                return
-//            }
-//            
-//            DispatchQueue.main.async {
-//                if let user = user {
-//                    self.textHello.text = "Hello, \(user.email)!"
-//                }
-//            }
-//        }
+        AuthService.shared.fetchUser { [weak self] user, error in
+            guard let self = self else { return }
+            if let error = error {
+                AlertManager.showFetchingUserError(on: self, with: error)
+                return
+            }
+            
+            DispatchQueue.main.async {
+                if let user = user {
+                    self.textHello.text = "Hello, \(user.name)!"
+                }
+            }
+        }
         
         NSLayoutConstraint.activate([
             scrollView.topAnchor.constraint(equalTo: view.topAnchor),

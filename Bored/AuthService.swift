@@ -23,6 +23,7 @@ class AuthService {
     ///   - Error?: An optional error if firebase provides once
     public func registerUser(with userRequest: RegisterUserRequest,
                              completion: @escaping (Bool, Error?)->Void){
+        let name = userRequest.name
         let username = userRequest.username
         let email =  userRequest.email
         let password = userRequest.password
@@ -33,7 +34,7 @@ class AuthService {
                 return
             }
             
-            guard let resultUser = result?.user else {
+            guard let resultUser = result?.user.uid else {
                 completion(false, nil)
                 return
             }
@@ -41,8 +42,9 @@ class AuthService {
             let db = Firestore.firestore()
             
             db.collection("users")
-                .document(resultUser.uid)
+                .document(resultUser)
                 .setData([
+                    "name": name,
                     "username": username,
                     "email": email
                 ]) { error in
@@ -98,9 +100,10 @@ class AuthService {
                 
                 if let snapshot = snapshot,
                    let snapshotData = snapshot.data(),
+                   let name = snapshotData["name"] as? String,
                    let username = snapshotData["username"] as? String,
                    let email = snapshotData["email"] as? String {
-                    let user = User(username: username, email: email, userUID: userUID)
+                    let user = User(name: name, username: username, email: email, userUID: userUID)
                     completion(user, nil)
                 }
             }
