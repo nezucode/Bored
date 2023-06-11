@@ -38,16 +38,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     public func checkAuthentication() {
         if Auth.auth().currentUser == nil {
             //Go to Sign In screen
-            let lc = LoginController()
-            let navVC = UINavigationController(rootViewController: lc)
-            navVC.modalPresentationStyle = .fullScreen
-            self.window?.rootViewController = navVC
+            self.goToController(with: LoginController())
         } else {
             //Go to Home screen
-            let hc = HomeController()
-            let navVC = UINavigationController(rootViewController: hc)
-            navVC.modalPresentationStyle = .fullScreen
-            self.window?.rootViewController = navVC        }
+            self.goToController(with: HomeController())
+        }
+    }
+    
+    private func goToController(with viewController: UIViewController) {
+        DispatchQueue.main.async { [weak self] in
+            UIView.animate(withDuration: 0.25) {
+                self?.window?.layer.opacity = 0
+            } completion: { [weak self] _ in
+                let nav = UINavigationController(rootViewController: viewController)
+                nav.modalPresentationStyle = .fullScreen
+                self?.window?.rootViewController = nav
+                
+                UIView.animate(withDuration: 0.25) { [weak self] in
+                    self?.window?.layer.opacity = 1
+                }
+            }
+        }
     }
     
     private func setupWindow(with scene: UIScene) {
